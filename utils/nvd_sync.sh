@@ -39,12 +39,13 @@ if [ ! -d $NVDPATH ]; then
 fi
 cd $NVDPATH
 rm -f nvdcve*
-i=2002
+i=2010
 
 
 year=`date +"%Y"`
 while [ $i -le $year ]; do
-      wget  http://nvd.nist.gov/download/nvdcve-$i.xml
+      wget  http://nvd.nist.gov/download/nvdcve-$i.xml.
+      gunzip nvdcve-$i.xml.g
       i=`expr $i + 1`
 done
 cd ..
