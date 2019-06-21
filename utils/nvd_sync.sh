@@ -44,8 +44,8 @@ i=2010
 
 year=`date +"%Y"`
 while [ $i -le $year ]; do
-      wget  http://nvd.nist.gov/download/nvdcve-$i.xml.
-      gunzip nvdcve-$i.xml.g
+      wget  http://nvd.nist.gov/download/nvdcve-$i.xml.gz
+      gunzip nvdcve-$i.xml.gz
       i=`expr $i + 1`
 done
 cd ..
